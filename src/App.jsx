@@ -1,13 +1,13 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import GrandParent from './GrandParent.jsx';
 
 const App = () => {
   const [count, setCount] = useState(0);
   const [darkMode, setDarkMode] = useState(false);
 
-  const increment = () => {
+  const increment = useCallback(() => {
     setCount((prevCount) => prevCount + 1);
-  };
+  }, [setCount]);
 
   const decrement = () => {
     setCount((prevCount) => prevCount - 1);
@@ -35,7 +35,7 @@ const App = () => {
         {darkMode ? 'Switch to Light' : 'Switch to Dark'}
       </button>
       <p>App Component</p>
-      <GrandParent style={style} />
+      <GrandParent style={style} increment={increment} />
       <GrandParent />
     </div>
   );
