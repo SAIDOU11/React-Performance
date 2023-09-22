@@ -16,8 +16,8 @@ const App = () => {
 
   return (
     <div>
-      <button onClick={decrement}>-1</button>
-      <button onClick={increment}>+1</button>
+      <button onClick={decrement}>-</button>
+      <button onClick={increment}>+</button>
       <h2>{count}</h2>
       <GrandParent count={count} />
       <GrandParent />

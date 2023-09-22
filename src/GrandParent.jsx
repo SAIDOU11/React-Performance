@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import Parent from './Parent.jsx';
 
 const GrandParent = ({ count }) => {
@@ -11,4 +12,4 @@ const GrandParent = ({ count }) => {
   );
 };
 
-export default GrandParent;
+export default memo(GrandParent);

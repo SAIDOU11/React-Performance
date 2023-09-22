@@ -27,7 +27,7 @@ button {
 .grandparent::before {
   content: '‍👴🏼';
   position: absolute;
-  left: -30%;
+  left: -30px;
 }
 
 .parent {
@@ -55,5 +55,11 @@ button {
 .grandchild {
   margin-left: 25px;
   position: relative;
+  left: -30px;
+}
+
+.grandchild::before {
+  content: '‍👶🏽';
+  position: absolute;
   left: -30px;
 }
